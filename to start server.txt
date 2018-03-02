@@ -1,0 +1,3 @@
+cd C:\FXServer-data
+
+C:\FXserver\run.cmd +exec server.cfg

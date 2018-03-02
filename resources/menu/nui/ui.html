@@ -1,0 +1,139 @@
+<!-- 
+
+	ActionMenu 
+	Created by WolfKnight
+	Additional help from lowheartrate, TheStonedTurtle, and Briglair. 
+
+ -->
+
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="ui.js" type="text/javascript"></script>
+        <link href="ui.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div id="actionmenu" style="display: none;">
+        	<!-- 
+        		This mainmenu div should be left as it is, you should change the buttons though.
+
+        		If you want to make a submenu, then you must create a new div, with the ID of the 
+        		div being the data-sub attribute of the button that will open it. For example, the 
+        		below button Example Submenu, has the data-sub attribute of "examplesubmenu", which
+        		is the same id as the div below. All submenus must also have a data-parent attribute. 
+        	 -->
+        	<div id="mainmenu">
+             <!--   <button class="menuoption" data-sub="Emotes">Emotes settings </button> -->
+                <button class="menuoption" data-sub="Civilindstillinger">civil settings</button>
+                <button class="menuoption" data-sub="politiindstillinger">police settings</button>
+                <button class="menuoption" data-sub="Bilindstillinger">cars settings</button>
+				<button class="menuoption" data-sub="ad">Ad</button>
+				<button class="menuoption" data-sub="EMS">FD/EMS</button>
+			</div>
+
+		<!--	 <div id="Emotes" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-sub="Emotesa">Emotes: a-g</button>
+                <button class="menuoption" data-sub="Emotesb">Emotes: h-n</button>
+                <button class="menuoption" data-sub="Emotesc">Emotes: o-z</button>
+            </div>
+
+            <div id="Emotesa" data-parent="mainmenu" style="display: none;">
+            	<button class="menuoption" data-action="kort1">a emote </button>
+            </div>
+
+            <div id="Emotesb" data-parent="mainmenu" style="display: none;">
+            	<button class="menuoption" data-action="mellem1">h emote </button>
+            </div>
+
+            <div id="Emotesc" data-parent="mainmenu" style="display: none;">
+          	<button class="menuoption" data-action="lang1">o emote</button>
+            </div>
+
+-->
+			<div id="Civilindstillinger" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="dropweap">Drop weapon</button>
+                <button class="menuoption" data-action="handsup">Hands up</button>
+                <button class="menuoption" data-action="onknee">go on knee </button>
+                <button class="menuoption" data-action="playerCrouch">crouch </button>
+                <button class="menuoption" data-action="return">Return </button>
+            </div>
+
+
+            <div id="politiindstillinger" data-parent="mainmenu" style="display: none;">
+                  <button class="menuoption" data-sub="loadout">Equip loadout </button>
+                  <button class="menuoption" data-action="cuff">cuff person</button>
+            <!--      <button class="menuoption" data-action="DragPlayer"> drag person</button> -->
+                  <button class="menuoption" data-action="PutInVehicle"> put a person in a car</button>
+                  <button class="menuoption" data-action="UnseatVehicle"> put a person out of car</button>
+                  <button class="menuoption" data-action="spikes"> spikes </button>
+                  <button class="menuoption" data-action="deletespikes">Slet spikes </button>
+				  <button class="menuoption" data-action="radarrc">Radar</button>
+                  <button class="menuoption" data-action="return">Return </button>
+            </div>
+
+            <div id="loadout" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="officer">Officer </button>
+                <button class="menuoption" data-action="ems">FD/Ems </button>
+                <button class="menuoption" data-action="return">Return </button>
+            </div>           
+           
+		    <div id="EMS" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="revive">Revive</button>
+                <button class="menuoption" data-action="ems">Equip loadout</button>
+                <button class="menuoption" data-action="return">Return </button>
+            </div>     
+
+            <div id="Bilindstillinger" data-parent="mainmenu" style="display: none;">
+            	<button class="menuoption" data-sub="Doors">trunk/doors</button>
+                <button class="menuoption" data-sub="rollwindow">window</button>
+                <button class="menuoption" data-action="engine">Engine</button>
+                <button class="menuoption" data-action="carfix">Repair</button>
+                <button class="menuoption" data-action="cleancar">Clean</button>
+                <button class="menuoption" data-action="dvslet">Delete</button>
+				<button class="menuoption" data-action="save">Save</button>
+                <button class="menuoption" data-action="lock">Lock</button>
+                <button class="menuoption" data-action="return">Return </button>
+
+            </div>
+
+            <div id="Doors" data-parent="mainmenu" style="display: none;">
+            	<button class="menuoption" data-action="Hood">Hood</button>
+            	<button class="menuoption" data-action="Trunk">Trunk</button>
+            	<button class="menuoption" data-action="doortopleft">Front door left</button>
+            	<button class="menuoption" data-action="doortopright">Front door right</button>
+            	<button class="menuoption" data-action="doorbuttonright">behind door right</button>
+            	<button class="menuoption" data-action="doorbuttonleft">behind door left </button>
+                <button class="menuoption" data-action="return">Return </button>
+
+            </div>
+
+
+            <div id="rollwindow" data-parent="mainmenu" style="display: none;"">
+                <button class="menuoption" data-action="rollwindow2">roll window up</button>
+                <button class="menuoption" data-action="rollwindow">roll window down</button>
+               <button class="menuoption" data-action="return">Return </button>
+
+            </div>
+
+            <div id="ad" data-parent="mainmenu" style="display: none;"">
+                <button class="menuoption" data-action="store">24/7</button>
+                <button class="menuoption" data-action="bank">Bank</button>
+				<button class="menuoption" data-action="traffic">traffic</button>
+				<button class="menuoption" data-action="dealership">Dealer</button>
+				<button class="menuoption" data-action="lsc">LSC</button>
+				<button class="menuoption" data-action="ammunation">Ammunation</button>
+				<button class="menuoption" data-action="taxi">Taxi</button>
+				<button class="menuoption" data-action="uber">Uber</button>
+				<button class="menuoption" data-action="chp">CHP</button>
+				<button class="menuoption" data-action="onlyadmin">AdminOnly</button>
+               <button class="menuoption" data-action="return">Return </button>
+
+            </div>
+			
+			<!-- Do not remove this or you will not be able to exit the menu -->
+
+			<button class="menuoption" data-action="exit">Exit</button>
+        </div>
+    </body>
+</html>
